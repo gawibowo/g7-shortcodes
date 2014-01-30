@@ -92,6 +92,15 @@
 		$('.accordion').g7_accordion();
 		$('.toggle').g7_toggle();
 		$('.tabs').g7_tabs();
-	});	
+
+		/**
+		 * close action for message boxes
+		 */
+		$('.msg').click(function() {
+			var msgbox = $(this);
+			msgbox.fadeTo('slow', 0);
+			msgbox.slideUp(341);
+		});
+	});
 
 })(jQuery);
