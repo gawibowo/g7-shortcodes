@@ -24,7 +24,7 @@ class G7_Shortcodes {
 	function init() {
 		if (!is_admin()) {
 			wp_enqueue_style('g7-shortcodes', $this->url . 'shortcodes.css');
-			wp_enqueue_script('g7-shortcodes', $this->url . 'shortcodes.js', array('jquery'));
+			wp_enqueue_script('g7-shortcodes', $this->url . 'shortcodes.js', array('jquery'), false, true);
 		}
 		if (current_user_can('edit_posts') && get_user_option('rich_editing')) {
 			add_filter('mce_external_plugins', array(&$this, 'add_plugin'));

@@ -9,6 +9,12 @@ blockquote.pullquote {
 	letter-spacing: 1px;
 	padding: 0 35px 0 35px;
 }
+blockquote.left {
+	float: left;
+}
+blockquote.right {
+	float: right;
+}
 blockquote.pullquote.right {
 	padding-right: 0;
 	margin-left: 20px;
@@ -17,10 +23,14 @@ blockquote.pullquote p {
 	padding-right: 10px;
 }
 blockquote cite {
+	display: block;
 	margin-top: 10px;
 	font-weight: normal;
 	font-size: 11px;
-	color: #222;
+	color: #555;
+}
+blockquote cite:before {
+	content: "— ";
 }
 
 
@@ -303,21 +313,28 @@ ul.tabs li a:hover {
 /* =Lists
 -----------------------------------*/
 
+.bullet > ul,
+.tick > ul,
+.cross > ul,
+.plus > ul {
+	list-style: none;
+	padding: 0;
+}
 .bullet ul li {
 	padding-left: 25px;
-	background: url(images/globe-small.png) 0 3px no-repeat;
+	background: url(images/globe-small.png) 0 5px no-repeat;
 }
 .tick ul li {
 	padding-left: 25px;
-	background: url(images/tick.png) 0 2px no-repeat;
+	background: url(images/tick.png) 0 4px no-repeat;
 }
 .cross ul li {
 	padding-left: 25px;
-	background: url(images/cross.png) 0 3px no-repeat;
+	background: url(images/cross.png) 0 5px no-repeat;
 }
 .plus ul li {
 	padding-left: 25px;
-	background: url(images/plus.png) 0 2px no-repeat;
+	background: url(images/plus.png) 0 4px no-repeat;
 }
 
 
