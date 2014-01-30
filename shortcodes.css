@@ -1,4 +1,29 @@
 
+
+/* =Blockquotes
+-----------------------------------*/
+
+blockquote.pullquote {
+	width: 220px;
+	margin: 0 0 20px;
+	letter-spacing: 1px;
+	padding: 0 35px 0 35px;
+}
+blockquote.pullquote.right {
+	padding-right: 0;
+	margin-left: 20px;
+}
+blockquote.pullquote p {
+	padding-right: 10px;
+}
+blockquote cite {
+	margin-top: 10px;
+	font-weight: normal;
+	font-size: 11px;
+	color: #222;
+}
+
+
 /* =Buttons
 -----------------------------------*/
 
