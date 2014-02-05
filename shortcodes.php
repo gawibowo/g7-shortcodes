@@ -8,7 +8,7 @@ function g7_clean_shortcodes($content){
     $array = array (
         '<p>[' => '[',
         ']</p>' => ']',
-        ']<br />' => ']'
+        ']<br />' => ']',
     );
     $content = strtr($content, $array);
     return $content;
@@ -21,17 +21,19 @@ add_filter('the_content', 'g7_clean_shortcodes');
 function g7_button($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'color' => 'white',
-			'size' => 'small',
-			'link' => ''
+			'color'  => 'white',
+			'size'   => 'small',
+			'link'   => '',
+			'target' => '',
 		),
 		$atts
 	);
 	return sprintf(
-		'<a class="btn %s %s" href="%s">%s</a>',
+		'<a class="btn %s %s" href="%s"%s>%s</a>',
 		$atts['color'],
 		$atts['size'],
 		$atts['link'],
+		$atts['target'] ? ' target="' . $atts['target'] . '"': '',
 		$content
 	);
 }
@@ -42,8 +44,8 @@ function g7_button($atts, $content = null) {
 function g7_blockquote($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'cite' => '',
-			'citelink' => ''
+			'cite'     => '',
+			'citelink' => '',
 		),
 		$atts
 	);
@@ -60,8 +62,8 @@ function g7_blockquote($atts, $content = null) {
 function g7_pullquote($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'align' => 'left',
-			'cite' => '',
+			'align'    => 'left',
+			'cite'     => '',
 			'citelink' => '',
 		),
 		$atts
@@ -80,7 +82,7 @@ function g7_pullquote($atts, $content = null) {
 function g7_list($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'type' => 'bullet'
+			'type' => 'bullet',
 		),
 		$atts
 	);
@@ -97,8 +99,8 @@ function g7_list($atts, $content = null) {
 function g7_message($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'type' => 'info',
-			'title' => ''
+			'type'  => 'info',
+			'title' => '',
 		),
 		$atts
 	);
@@ -132,16 +134,16 @@ function g7_tab($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
 			'title' => '',
-			'id' => 'tab-%d'
+			'id'    => 'tab-%d',
 		),
 		$atts
 	);
 
 	$x = $GLOBALS['tab_count'];
 	$GLOBALS['tabs'][$x] = array(
-		'title' => $atts['title'],
+		'title'   => $atts['title'],
 		'content' => do_shortcode($content),
-		'id' => sprintf($atts['id'], $GLOBALS['tab_count'])
+		'id'      => sprintf($atts['id'], $GLOBALS['tab_count']),
 	);
 
 	$GLOBALS['tab_count']++;
@@ -158,7 +160,7 @@ function g7_section($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
 			'title' => '',
-			'state' => 'closed'
+			'state' => 'closed',
 		),
 		$atts
 	);
@@ -216,7 +218,7 @@ function g7_separator($atts, $content = null, $tag = '') {
 function g7_space($atts, $content = null, $tag = '') {
 	$atts = shortcode_atts(
 		array(
-			'height' => '20'
+			'height' => '20',
 		),
 		$atts
 	);
@@ -245,19 +247,23 @@ function g7_code($atts, $content = null) {
 function g7_social($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'type' => '',
-			'link' => '',
-			'size' => '16'
+			'type'   => '',
+			'link'   => '',
+			'size'   => '16',
+			'target' => '',
 		),
 		$atts
 	);
 	return sprintf(
-		'<a class="social" href="%s"><img src="%s/images/social/%spx/%s.png" alt="%s"></a>',
+		'<a class="social" href="%s"%s><img src="%simages/social/%spx/%s.png" alt="%s" width="%s" height="%s"></a>',
 		$atts['link'],
-		PARENT_URL,
+		$atts['target'] ? ' target="' . $atts['target'] . '"': '',
+		plugin_dir_url(__FILE__),
 		$atts['size'],
 		$atts['type'],
-		$atts['type']
+		$atts['type'],
+		$atts['size'],
+		$atts['size']
 	);
 }
 
@@ -267,7 +273,7 @@ function g7_social($atts, $content = null) {
 function g7_dropcap($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'type' => ''
+			'type' => '',
 		),
 		$atts
 	);
@@ -284,7 +290,7 @@ function g7_dropcap($atts, $content = null) {
 function g7_highlight($atts, $content = null) {
 	$atts = shortcode_atts(
 		array(
-			'color' => 'red'
+			'color' => 'red',
 		),
 		$atts
 	);

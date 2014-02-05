@@ -2,10 +2,10 @@
 /*
 Plugin Name: G7 Shortcodes
 Plugin URI: http://gawibowo.com/plugins/g7-shortcodes
-Description: A shortcode generator for any theme. This plugin is a part of G7 Theme Framework.
+Description: A shortcode plugin for any theme. Adds a shortcode generator in admin Post/Page edit screen.
 Version: 1.0
 Author: gawibowo
-Author URI: http://themeforest.net/user/gawibowo
+Author URI: http://gawibowo.com
 */
 
 class G7_Shortcodes {

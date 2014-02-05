@@ -26,10 +26,10 @@
 					a.addItem(c, '3 columns', '[one_third]<br>Column 1<br>[/one_third]<br><br>[one_third]<br>Column 2<br>[/one_third]<br><br>[one_third_last]<br>Column 3<br>[/one_third_last]<br><br>');
 					a.addItem(c, '4 columns', '[one_fourth]<br>Column 1<br>[/one_fourth]<br><br>[one_fourth]<br>Column 2<br>[/one_fourth]<br><br>[one_fourth]<br>Column 3<br>[/one_fourth]<br><br>[one_fourth_last]<br>Column 4<br>[/one_fourth_last]<br><br>');
 					a.addItemDialog(c, 'more...', 'columns', 240, 100);
-					
+
 					/* buttons
 					-------------------------------------------------------------------------------*/
-					a.addItemDialog(m, 'Buttons', 'button', 240, 150);
+					a.addItemDialog(m, 'Buttons', 'button', 240, 180);
 
 					/* lists
 					-------------------------------------------------------------------------------*/
@@ -45,15 +45,15 @@
 					/* message boxes
 					-------------------------------------------------------------------------------*/
 					a.addItemDialog(m, 'Message Boxes', 'message', 240, 125);
-					
+
 					/* dropcaps
 					-------------------------------------------------------------------------------*/
 					a.addItemDialog(m, 'Dropcaps', 'dropcap', 240, 100);
-					
+
 					/* highlights
 					-------------------------------------------------------------------------------*/
 					a.addItemDialog(m, 'Highlights', 'highlight', 240, 100);
-					
+
 					/* separator
 					-------------------------------------------------------------------------------*/
 					c = m.addMenu({
@@ -88,7 +88,7 @@
 
 					/* social
 					-------------------------------------------------------------------------------*/
-					a.addItemDialog(m, 'Social Icons', 'social', 240, 150);
+					a.addItemDialog(m, 'Social Icons', 'social', 240, 180);
 
 				});
 
