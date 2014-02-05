@@ -24,23 +24,30 @@ $shortcodes = array(
 			'terracotta',
 			'pink',
 			'cranberry',
-			'sunset'
+			'sunset',
 		),
 		'size' => array(
 			'small',
 			'medium',
-			'large'
+			'large',
 		),
-		'link' => ''
+		'link' => '',
+		'target' => array(
+			'',
+			'_blank',
+			'_self',
+			'_parent',
+			'_top',
+		),
 	),
 	'message' => array(
 		'type' => array(
 			'info',
 			'success',
 			'error',
-			'warning'
+			'warning',
 		),
-		'title' => ''
+		'title' => '',
 	),
 	'columns' => array(
 		'type' => array(
@@ -53,8 +60,8 @@ $shortcodes = array(
 			'3/4 - 1/4',
 			'1/4 - 1/4 - 1/2',
 			'1/4 - 1/2 - 1/4',
-			'1/2 - 1/4 - 1/4'
-		)
+			'1/2 - 1/4 - 1/4',
+		),
 	),
 	'highlight' => array(
 		'color' => array(
@@ -64,40 +71,93 @@ $shortcodes = array(
 			'yellow',
 			'orange',
 			'gray',
-			'brown'
-		)
+			'brown',
+		),
 	),
 	'dropcap' => array(
 		'type' => array(
 			'circle',
 			'square',
-			'none'
-		)
+			'none',
+		),
 	),
 	'blockquote' => array(
 		'cite' => '',
-		'citelink' => ''
+		'citelink' => '',
 	),
 	'pullquote' => array(
 		'align' => array(
 			'left',
-			'right'
+			'right',
 		),
 		'cite' => '',
-		'citelink' => ''
+		'citelink' => '',
 	),
 );
 
 if (defined('G7_SOCIAL')) {
-	$shortcodes['social'] = array(
-		'type' => unserialize(G7_SOCIAL),
-		'link' => '',
-		'size' => array(
-			'16',
-			'32'
-		)
+	$social_type = unserialize(G7_SOCIAL);
+} else {
+	$social_type = array(
+		'500px',
+		'addthis',
+		'behance',
+		'blogger',
+		'delicious',
+		'deviantart',
+		'digg',
+		'dopplr',
+		'dribbble',
+		'evernote',
+		'facebook',
+		'flickr',
+		'forrst',
+		'github',
+		'google+',
+		'grooveshark',
+		'instagram',
+		'lastfm',
+		'linkedin',
+		'mail',
+		'myspace',
+		'path',
+		'paypal',
+		'picasa',
+		'pinterest',
+		'posterous',
+		'reddit',
+		'rss',
+		'sharethis',
+		'skype',
+		'soundcloud',
+		'spotify',
+		'stumbleupon',
+		'tumblr',
+		'twitter',
+		'viddler',
+		'vimeo',
+		'virb',
+		'windows',
+		'wordpress',
+		'youtube',
+		'zerply',
 	);
 }
+$shortcodes['social'] = array(
+	'type' => $social_type,
+	'link' => '',
+	'size' => array(
+		'16',
+		'32',
+	),
+	'target' => array(
+		'',
+		'_blank',
+		'_self',
+		'_parent',
+		'_top',
+	),
+);
 
 $nct = array('social', 'separator');
 $sc = $_GET['sc'];
