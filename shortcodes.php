@@ -29,7 +29,7 @@ function g7_button($atts, $content = null) {
 		$atts
 	);
 	return sprintf(
-		'<a class="btn %s %s" href="%s"%s>%s</a>',
+		'<a class="g7-btn %s %s" href="%s"%s>%s</a>',
 		$atts['color'],
 		$atts['size'],
 		$atts['link'],
@@ -69,7 +69,7 @@ function g7_pullquote($atts, $content = null) {
 		$atts
 	);
 	return sprintf(
-		'<blockquote class="pullquote %s">%s%s</blockquote>',
+		'<blockquote class="g7-pullquote %s">%s%s</blockquote>',
 		$atts['align'],
 		$content,
 		$atts['cite'] ? '<cite>' . $atts['cite'] . ($atts['citelink'] ? ', <a href="' . $atts['citelink'] . '">' . $atts['citelink'] . '</a>' : '') . '</cite>' : ''
@@ -87,7 +87,7 @@ function g7_list($atts, $content = null) {
 		$atts
 	);
 	return sprintf(
-		'<div class="%s">%s</div>',
+		'<div class="g7-%s">%s</div>',
 		$atts['type'],
 		$content
 	);
@@ -105,7 +105,7 @@ function g7_message($atts, $content = null) {
 		$atts
 	);
 	return sprintf(
-		'<div class="%s msg">%s<div>%s</div></div>',
+		'<div class="g7-msg g7-%s">%s<div>%s</div></div>',
 		$atts['type'],
 		empty($atts['title']) ? '' : "<h3>$atts[title]</h3>",
 		do_shortcode($content)
@@ -124,8 +124,8 @@ function g7_tabs($atts, $content = null) {
 			$tabs[] = '<li><a href="#'.$tab['id'].'">' . $tab['title'] . '</a></li>';
 			$panes[] = '<li id="'.$tab['id'].'">' . $tab['content'] . '</li>';
 		}
-		$out = "\n" . '<ul class="tabs">' . implode("\n", $tabs) . '</ul>';
-		$out .= "\n" . '<ul class="tabs-content">' . implode("\n", $panes) . '</ul>' . "\n";
+		$out = "\n" . '<ul class="g7-tabs">' . implode("\n", $tabs) . '</ul>';
+		$out .= "\n" . '<ul class="g7-tabs-content">' . implode("\n", $panes) . '</ul>' . "\n";
 	}
 	return $out;
 }
@@ -153,7 +153,7 @@ function g7_tab($atts, $content = null) {
  * Accordion
  */
 function g7_accordion($atts, $content = null) {
-	return '<dl class="accordion">' . do_shortcode($content) . '</dl>';
+	return '<dl class="g7-accordion">' . do_shortcode($content) . '</dl>';
 }
 
 function g7_section($atts, $content = null) {
@@ -186,7 +186,7 @@ function g7_toggle($atts, $content = null) {
 		$atts['title'],
 		$content
 	);
-	return '<dl class="toggle">' . do_shortcode($section) . '</dl>';
+	return '<dl class="g7-toggle">' . do_shortcode($section) . '</dl>';
 }
 
 /**
@@ -195,7 +195,7 @@ function g7_toggle($atts, $content = null) {
 function g7_columns($atts, $content = null, $tag = '') {
 	$last = strpos($tag, '_last');
 	$tag = str_replace('_last', ' last', $tag);
-	$out = '<div class="' . $tag . '">' . do_shortcode($content) . '</div>';
+	$out = '<div class="g7-' . $tag . '">' . do_shortcode($content) . '</div>';
 	if ($last !== false) {
 		$out .= '<div class="clear"></div>';
 	}
@@ -207,7 +207,7 @@ function g7_columns($atts, $content = null, $tag = '') {
  */
 function g7_separator($atts, $content = null, $tag = '') {
 	return sprintf(
-		'<div class="%s"></div>',
+		'<div class="g7-%s"></div>',
 		$tag
 	);
 }
@@ -236,7 +236,7 @@ function g7_code($atts, $content = null) {
 	$content = str_replace('[', '<span class="sc">[</span>', $content);
 	$content = str_replace(']', '<span class="sc">]</span>', $content);
 	return sprintf(
-		'<div class="code"><pre>%s</pre></div>',
+		'<div class="g7-code"><pre>%s</pre></div>',
 		$content
 	);
 }
@@ -255,7 +255,7 @@ function g7_social($atts, $content = null) {
 		$atts
 	);
 	return sprintf(
-		'<a class="social" href="%s"%s><img src="%simages/social/%spx/%s.png" alt="%s" width="%s" height="%s"></a>',
+		'<a class="g7-social" href="%s"%s><img src="%simages/social/%spx/%s.png" alt="%s" width="%s" height="%s"></a>',
 		$atts['link'],
 		$atts['target'] ? ' target="' . $atts['target'] . '"': '',
 		plugin_dir_url(__FILE__),
@@ -278,7 +278,7 @@ function g7_dropcap($atts, $content = null) {
 		$atts
 	);
 	return sprintf(
-		'<span class="dropcap%s">%s</span>',
+		'<span class="g7-dropcap%s">%s</span>',
 		$atts['type'] ? ' ' . $atts['type'] : '',
 		$content
 	);
@@ -295,7 +295,7 @@ function g7_highlight($atts, $content = null) {
 		$atts
 	);
 	return sprintf(
-		'<span class="highlight %s">%s</span>',
+		'<span class="g7-highlight %s">%s</span>',
 		$atts['color'],
 		$content
 	);

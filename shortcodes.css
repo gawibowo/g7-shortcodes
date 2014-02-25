@@ -1,7 +1,7 @@
 /* =Blockquotes
 -----------------------------------*/
 
-blockquote.pullquote {
+blockquote.g7-pullquote {
 	width: 220px;
 	margin: 0 0 20px;
 	letter-spacing: 1px;
@@ -13,11 +13,11 @@ blockquote.left {
 blockquote.right {
 	float: right;
 }
-blockquote.pullquote.right {
+blockquote.g7-pullquote.right {
 	padding-right: 0;
 	margin-left: 20px;
 }
-blockquote.pullquote p {
+blockquote.g7-pullquote p {
 	padding-right: 10px;
 }
 blockquote cite {
@@ -35,7 +35,7 @@ blockquote cite:before {
 /* =Buttons
 -----------------------------------*/
 
-.btn {
+.g7-btn {
 	cursor: pointer;
 	display: inline-block;
 	padding: 5px 12px 8px;
@@ -70,8 +70,8 @@ blockquote cite:before {
 	border-radius: 2px;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
-.btn:hover,
-.btn:focus {
+.g7-btn:hover,
+.g7-btn:focus {
 	color: #fff;
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
 	background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
@@ -79,51 +79,51 @@ blockquote cite:before {
 	background-image: -o-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
 	background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
 }
-.btn.red {
+.g7-btn.red {
 	background-color: #ef4423;
 }
-.btn.bittersweet {
+.g7-btn.bittersweet {
 	background-color: #fb6239;
 }
-.btn.coral {
+.g7-btn.coral {
 	background-color: #ff764c;
 }
-.btn.orange {
+.g7-btn.orange {
 	background-color: #fe9b00;
 }
-.btn.celery {
+.g7-btn.celery {
 	background-color: #9fc54e;
 }
-.btn.blue {
+.g7-btn.blue {
 	background-color: #3e93d2;
 }
-.btn.cerulean {
+.g7-btn.cerulean {
 	background-color: #00adef;
 }
-.btn.eastern {
+.g7-btn.eastern {
 	background-color: #2790b0;
 }
-.btn.terracotta {
+.g7-btn.terracotta {
 	background-color: #e15f4e;
 }
-.btn.pink {
+.g7-btn.pink {
 	background-color: #ff6fbc;
 }
-.btn.cranberry {
+.g7-btn.cranberry {
 	background-color: #dd577a;
 }
-.btn.sunset {
+.g7-btn.sunset {
 	background-color: #ff4c54;
 }
-.btn.medium {
+.g7-btn.medium {
 	font-size: 14px;
 	padding: 8px 16px 11px;
 }
-.btn.large {
+.g7-btn.large {
 	font-size: 17px;
 	padding: 12px 20px 15px;
 }
-.buttons .btn {
+.buttons .g7-btn {
 	margin: 0 10px 10px 0;
 }
 
@@ -131,7 +131,7 @@ blockquote cite:before {
 /* =Message Boxes
 -----------------------------------*/
 
-.msg {
+.g7-msg {
 	color: #444;
 	border: 1px solid #ddd;
 	margin-bottom: 20px;
@@ -146,29 +146,29 @@ blockquote cite:before {
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
-.msg h3 {
+.g7-msg h3 {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: bold;
 	color: #555;
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
-.info {
+.g7-info {
 	border-color: #BFDBF2;
 	background-color: #EDFAFF;
 	background-image: url(images/information-white.png);
 }
-.success {
+.g7-success {
 	border-color: #D3E5AD;
 	background-color: #FAFFEA;
 	background-image: url(images/tick.png);
 }
-.error {
+.g7-error {
 	border-color: #F2BDA3;
 	background-color: #FCE8E0;
 	background-image: url(images/exclamation-red.png);
 }
-.warning {
+.g7-warning {
 	border-color: #EAE3AF;
 	background-color: #FFFCE5;
 	background-image: url(images/exclamation.png);
@@ -178,13 +178,13 @@ blockquote cite:before {
 /* =Tabs
 -----------------------------------*/
 
-ul.tabs {
+ul.g7-tabs {
 	display: block;
 	margin: 0 0 20px 0;
 	padding: 0;
 	border-bottom: solid 1px #ddd;
 }
-ul.tabs li {
+ul.g7-tabs li {
 	display: block;
 	width: auto;
 	height: 30px;
@@ -192,7 +192,7 @@ ul.tabs li {
 	float: left;
 	margin-bottom: 0;
 }
-ul.tabs li a {
+ul.g7-tabs li a {
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
@@ -209,7 +209,7 @@ ul.tabs li a {
 	outline: none;
 	transition: none;
 }
-ul.tabs li a.active {
+ul.g7-tabs li a.active {
 	background: #fff;
 	height: 30px;
 	position: relative;
@@ -225,34 +225,34 @@ ul.tabs li a.active {
 	-webkit-border-top-right-radius: 2px;
 	border-top-right-radius: 2px;
 }
-ul.tabs li:first-child a.active {
+ul.g7-tabs li:first-child a.active {
 	margin-left: 0;
 }
-ul.tabs li:first-child a {
+ul.g7-tabs li:first-child a {
 	border-width: 1px 1px 0 1px;
 	-moz-border-radius-topleft: 2px;
 	-webkit-border-top-left-radius: 2px;
 	border-top-left-radius: 2px;
 }
-ul.tabs li:last-child a {
+ul.g7-tabs li:last-child a {
 	-moz-border-radius-topright: 2px;
 	-webkit-border-top-right-radius: 2px;
 	border-top-right-radius: 2px;
 }
-ul.tabs-content {
+ul.g7-tabs-content {
 	list-style-type: none;
 	margin: 0 0 20px;
 	padding: 0;
 	display: block;
 }
-ul.tabs-content > li {
+ul.g7-tabs-content > li {
 	display: none;
 }
-ul.tabs-content > li.active {
+ul.g7-tabs-content > li.active {
 	display: block;
 }
-ul.tabs:before,
-ul.tabs:after {
+ul.g7-tabs:before,
+ul.g7-tabs:after {
 	content: '\0020';
 	display: block;
 	overflow: hidden;
@@ -260,18 +260,18 @@ ul.tabs:after {
 	width: 0;
 	height: 0;
 }
-ul.tabs:after {
+ul.g7-tabs:after {
 	clear: both;
 }
-ul.tabs {
+ul.g7-tabs {
 	zoom: 1;
 }
 
-ul.tabs li a {
+ul.g7-tabs li a {
 	color: #999;
 	background-color: #fafafa;
 }
-ul.tabs li a:hover {
+ul.g7-tabs li a:hover {
 	background-color: #fff;
 }
 
@@ -279,12 +279,12 @@ ul.tabs li a:hover {
 /* =Accordion
 -----------------------------------*/
 
-.accordion {
+.g7-accordion {
 	border: 1px solid #ddd;
 	border-bottom: none;
 	margin-bottom: 20px;
 }
-.accordion > dt {
+.g7-accordion > dt {
 	color: #999;
 	background-color: #fafafa;
 	padding: 10px;
@@ -292,16 +292,16 @@ ul.tabs li a:hover {
 	margin: 0;
 	border-bottom: 1px solid #ddd;
 }
-.accordion > dt.active {
+.g7-accordion > dt.active {
 	background: #fff;
 	color: #444;
 	border-bottom: none;
 	font-weight: bold;
 }
-.accordion > dt:hover {
+.g7-accordion > dt:hover {
 	background-color: #fff;
 }
-.accordion > dd {
+.g7-accordion > dd {
 	margin: 0;
 	padding: 10px;
 	border-bottom: 1px solid #ddd;
@@ -311,26 +311,26 @@ ul.tabs li a:hover {
 /* =Lists
 -----------------------------------*/
 
-.bullet > ul,
-.tick > ul,
-.cross > ul,
-.plus > ul {
+.g7-bullet > ul,
+.g7-tick > ul,
+.g7-cross > ul,
+.g7-plus > ul {
 	list-style: none;
 	padding: 0;
 }
-.bullet ul li {
+.g7-bullet ul li {
 	padding-left: 25px;
 	background: url(images/globe-small.png) 0 5px no-repeat;
 }
-.tick ul li {
+.g7-tick ul li {
 	padding-left: 25px;
 	background: url(images/tick.png) 0 4px no-repeat;
 }
-.cross ul li {
+.g7-cross ul li {
 	padding-left: 25px;
 	background: url(images/cross.png) 0 5px no-repeat;
 }
-.plus ul li {
+.g7-plus ul li {
 	padding-left: 25px;
 	background: url(images/plus.png) 0 4px no-repeat;
 }
@@ -339,33 +339,33 @@ ul.tabs li a:hover {
 /* =Columns
 ----------------------------------------------- */
 
-.one_half,
-.one_third,
-.two_third,
-.one_fourth,
-.two_fourth,
-.three_fourth {
+.g7-one_half,
+.g7-one_third,
+.g7-two_third,
+.g7-one_fourth,
+.g7-two_fourth,
+.g7-three_fourth {
 	margin-right: 4%;
 	float: left;
 	margin-bottom: 20px;
 	height: auto !important;
 }
-.one_half {
+.g7-one_half {
 	width: 48%;
 }
-.one_third {
+.g7-one_third {
 	width: 30.6666%;
 }
-.two_third {
+.g7-two_third {
 	width: 65.3332%;
 }
-.one_fourth {
+.g7-one_fourth {
 	width: 22%;
 }
-.three_fourth {
+.g7-three_fourth {
 	width: 74%;
 }
-.last {
+.g7-last {
 	margin-right: 0 !important;
 }
 
@@ -373,13 +373,13 @@ ul.tabs li a:hover {
 /* =Separator
 ----------------------------------------------- */
 
-.separator {
+.g7-separator {
 	border-top: 1px dashed #ebebeb;
 	height: 1px;
 	margin-bottom: 19px;
 	clear: both;
 }
-.space {
+.g7-space {
 	height: 20px;
 	clear: both;
 }
@@ -388,7 +388,7 @@ ul.tabs li a:hover {
 /* =Code
 ----------------------------------------------- */
 
-.code pre {
+.g7-code pre {
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
 	white-space: -pre-wrap;
@@ -409,7 +409,7 @@ ul.tabs li a:hover {
 /* =Highlight
 ----------------------------------------------- */
 
-.highlight {
+.g7-highlight {
 	background-color: #777;
 	color: #222;
 	padding: 0 3px;
@@ -417,25 +417,25 @@ ul.tabs li a:hover {
 	-moz-border-radius: 2px;
 	border-radius: 2px;
 }
-.highlight.red {
+.g7-highlight.red {
 	background-color: #F29898;
 }
-.highlight.green {
+.g7-highlight.green {
 	background-color: #8BF58B;
 }
-.highlight.blue {
+.g7-highlight.blue {
 	background-color: #A0C6FF;
 }
-.highlight.yellow {
+.g7-highlight.yellow {
 	background-color: #FFF795;
 }
-.highlight.orange {
+.g7-highlight.orange {
 	background-color: #FABF83;
 }
-.highlight.gray {
+.g7-highlight.gray {
 	background-color: #E0E0E0;
 }
-.highlight.brown {
+.g7-highlight.brown {
 	background-color: #D3A75D;
 }
 
@@ -443,21 +443,21 @@ ul.tabs li a:hover {
 /* =Toggles
 ----------------------------------------------- */
 
-dl.toggle {
+dl.g7-toggle {
 	margin-bottom: 0;
 	padding: 10px 0;
 }
-dl.toggle dt {
+dl.g7-toggle dt {
 	padding: 0 0 0 20px;
 	background: #fff url(images/acc-plus.gif) -15px -10px no-repeat;
 	cursor: pointer;
 }
-dl.toggle dd {
+dl.g7-toggle dd {
 	margin: 0;
 	padding: 10px 10px 10px 20px;
 	border-bottom: 1px solid #efefef;
 }
-dl.toggle dt.active {
+dl.g7-toggle dt.active {
 	color: #444;
 	background: #fff url(images/acc-min.gif) -15px -10px no-repeat;
 }
@@ -466,7 +466,7 @@ dl.toggle dt.active {
 /* =Dropcap
 ----------------------------------------------- */
 
-.dropcap {
+.g7-dropcap {
 	float: left;
 	width: 32px;
 	height: 32px;
@@ -475,12 +475,12 @@ dl.toggle dt.active {
 	font-size: 36px;
 	text-align: center;
 }
-.dropcap.square {
+.g7-dropcap.square {
 	font-size: 24px;
 	color: #fff;
 	background: #444;
 }
-.dropcap.circle {
+.g7-dropcap.circle {
 	font-size: 24px;
 	color: #fff;
 	background: #444;
@@ -493,7 +493,7 @@ dl.toggle dt.active {
 /* =Social
 ------------------------------------------------------------ */
 
-a.social:hover img {
+a.g7-social:hover img {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 	filter: alpha(opacity=70);
 	opacity: 0.7;
