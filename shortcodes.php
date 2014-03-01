@@ -194,7 +194,7 @@ function g7_toggle($atts, $content = null) {
  */
 function g7_columns($atts, $content = null, $tag = '') {
 	$last = strpos($tag, '_last');
-	$tag = str_replace('_last', ' last', $tag);
+	$tag = str_replace('_last', ' g7-last', $tag);
 	$out = '<div class="g7-' . $tag . '">' . do_shortcode($content) . '</div>';
 	if ($last !== false) {
 		$out .= '<div class="clear"></div>';
