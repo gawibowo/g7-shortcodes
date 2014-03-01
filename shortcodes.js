@@ -89,14 +89,14 @@
 		/**
 		 * activate accordion, toggle and tabs
 		 */
-		$('.accordion').g7_accordion();
-		$('.toggle').g7_toggle();
-		$('.tabs').g7_tabs();
+		$('.g7-accordion').g7_accordion();
+		$('.g7-toggle').g7_toggle();
+		$('.g7-tabs').g7_tabs();
 
 		/**
 		 * close action for message boxes
 		 */
-		$('.msg').click(function() {
+		$('.g7-msg').click(function() {
 			var msgbox = $(this);
 			msgbox.fadeTo('slow', 0);
 			msgbox.slideUp(341);

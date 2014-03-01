@@ -126,6 +126,11 @@ blockquote cite:before {
 .buttons .g7-btn {
 	margin: 0 10px 10px 0;
 }
+body a.g7-btn,
+body a.g7-btn:hover {
+	color: #fff;
+	text-decoration: none;
+}
 
 
 /* =Message Boxes
@@ -173,6 +178,9 @@ blockquote cite:before {
 	background-color: #FFFCE5;
 	background-image: url(images/exclamation.png);
 }
+body .g7-msg h3 {
+	margin: 0 0 10px;
+}
 
 
 /* =Tabs
@@ -180,7 +188,7 @@ blockquote cite:before {
 
 ul.g7-tabs {
 	display: block;
-	margin: 0 0 20px 0;
+	margin: 0 0 20px 0 !important;
 	padding: 0;
 	border-bottom: solid 1px #ddd;
 }
@@ -190,7 +198,7 @@ ul.g7-tabs li {
 	height: 30px;
 	padding: 0;
 	float: left;
-	margin-bottom: 0;
+	margin: 0;
 }
 ul.g7-tabs li a {
 	-moz-box-sizing: content-box;
@@ -241,12 +249,14 @@ ul.g7-tabs li:last-child a {
 }
 ul.g7-tabs-content {
 	list-style-type: none;
-	margin: 0 0 20px;
+	margin: 0 0 20px !important;
 	padding: 0;
 	display: block;
 }
 ul.g7-tabs-content > li {
 	display: none;
+	list-style: none;
+	margin: 0;
 }
 ul.g7-tabs-content > li.active {
 	display: block;
@@ -302,7 +312,7 @@ ul.g7-tabs li a:hover {
 	background-color: #fff;
 }
 .g7-accordion > dd {
-	margin: 0;
+	margin: 0 !important;
 	padding: 10px;
 	border-bottom: 1px solid #ddd;
 }
@@ -317,6 +327,7 @@ ul.g7-tabs li a:hover {
 .g7-plus > ul {
 	list-style: none;
 	padding: 0;
+	margin-left: 0 !important;
 }
 .g7-bullet ul li {
 	padding-left: 25px;
@@ -333,6 +344,13 @@ ul.g7-tabs li a:hover {
 .g7-plus ul li {
 	padding-left: 25px;
 	background: url(images/plus.png) 0 4px no-repeat;
+}
+body .g7-bullet ul li,
+body .g7-tick ul li,
+body .g7-cross ul li,
+body .g7-plus ul li {
+	margin: 0;
+	list-style: none;
 }
 
 
@@ -403,6 +421,11 @@ ul.g7-tabs li a:hover {
 	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.04);
 	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.04);
 	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.04);
+}
+body .g7-code pre,
+#content .g7-code pre {
+	line-height: 19px;
+	padding: 19px;
 }
 
 
