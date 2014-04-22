@@ -33,7 +33,11 @@ class G7_Shortcodes {
 	}
 
 	function add_plugin($plugin_array) {
-		$plugin_array['g7_button'] = $this->url . 'buttons.js';
+		if (version_compare(get_bloginfo('version'), 3.9, '>=')) {
+			$plugin_array['g7_button'] = $this->url . 'buttons2.js';
+		} else {
+			$plugin_array['g7_button'] = $this->url . 'buttons.js';
+		}
 		return $plugin_array;
 	}
 
