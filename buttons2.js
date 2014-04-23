@@ -162,7 +162,9 @@
 								var shortcode = '[button';
 								$.each(e.data, function(index, val) {
 									if (typeof val !== 'undefined') {
-										shortcode += ' ' + index + '="' + val + '"';
+										if (val) {
+											shortcode += ' ' + index + '="' + val + '"';
+										}
 									}
 								});
 								shortcode += ']';
@@ -238,7 +240,9 @@
 								var shortcode = '[message';
 								$.each(e.data, function(index, val) {
 									if (typeof val !== 'undefined') {
-										shortcode += ' ' + index + '="' + val + '"';
+										if (val) {
+											shortcode += ' ' + index + '="' + val + '"';
+										}
 									}
 								});
 								shortcode += ']';
@@ -275,7 +279,9 @@
 								var shortcode = '[dropcap';
 								$.each(e.data, function(index, val) {
 									if (typeof val !== 'undefined') {
-										shortcode += ' ' + index + '="' + val + '"';
+										if (val) {
+											shortcode += ' ' + index + '="' + val + '"';
+										}
 									}
 								});
 								shortcode += ']';
@@ -316,7 +322,9 @@
 								var shortcode = '[highlight';
 								$.each(e.data, function(index, val) {
 									if (typeof val !== 'undefined') {
-										shortcode += ' ' + index + '="' + val + '"';
+										if (val) {
+											shortcode += ' ' + index + '="' + val + '"';
+										}
 									}
 								});
 								shortcode += ']';
@@ -373,7 +381,9 @@
 										var shortcode = '[blockquote';
 										$.each(e.data, function(index, val) {
 											if (typeof val !== 'undefined') {
-												shortcode += ' ' + index + '="' + val + '"';
+												if (val) {
+													shortcode += ' ' + index + '="' + val + '"';
+												}
 											}
 										});
 										shortcode += ']';
@@ -419,7 +429,9 @@
 										var shortcode = '[pullquote';
 										$.each(e.data, function(index, val) {
 											if (typeof val !== 'undefined') {
-												shortcode += ' ' + index + '="' + val + '"';
+												if (val) {
+													shortcode += ' ' + index + '="' + val + '"';
+												}
 											}
 										});
 										shortcode += ']';
@@ -547,7 +559,9 @@
 								var shortcode = '[social';
 								$.each(e.data, function(index, val) {
 									if (typeof val !== 'undefined') {
-										shortcode += ' ' + index + '="' + val + '"';
+										if (val) {
+											shortcode += ' ' + index + '="' + val + '"';
+										}
 									}
 								});
 								shortcode += ']';
