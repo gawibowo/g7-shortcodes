@@ -4,14 +4,14 @@ add_filter('widget_text', 'do_shortcode');
 /**
  * Clean up Shortcodes
  */
-function g7_clean_shortcodes($content){
-    $array = array (
-        '<p>[' => '[',
-        ']</p>' => ']',
-        ']<br />' => ']',
-    );
-    $content = strtr($content, $array);
-    return $content;
+function g7_clean_shortcodes($content) {
+	$array = array (
+		'<p>[' => '[',
+		']</p>' => ']',
+		']<br />' => ']',
+	);
+	$content = strtr($content, $array);
+	return $content;
 }
 add_filter('the_content', 'g7_clean_shortcodes');
 

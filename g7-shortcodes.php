@@ -2,8 +2,8 @@
 /*
 Plugin Name: G7 Shortcodes
 Plugin URI: http://gawibowo.com/plugins/g7-shortcodes
-Description: Shortcodes generator.
-Version: 1.1
+Description: Shortcodes generator plugin for WordPress.
+Version: 1.2
 Author: gawibowo
 Author URI: http://gawibowo.com
 */
@@ -23,8 +23,8 @@ class G7_Shortcodes {
 
 	function init() {
 		if (!is_admin()) {
-			wp_enqueue_style('g7-shortcodes', $this->url . 'shortcodes.css');
-			wp_enqueue_script('g7-shortcodes', $this->url . 'shortcodes.js', array('jquery'), false, true);
+			wp_enqueue_style('g7-shortcodes', $this->url . 'css/shortcodes.css');
+			wp_enqueue_script('g7-shortcodes', $this->url . 'js/shortcodes.js', array('jquery'), false, true);
 		}
 		if (current_user_can('edit_posts') && get_user_option('rich_editing')) {
 			add_filter('mce_external_plugins', array(&$this, 'add_plugin'));
@@ -34,9 +34,9 @@ class G7_Shortcodes {
 
 	function add_plugin($plugin_array) {
 		if (version_compare(get_bloginfo('version'), 3.9, '>=')) {
-			$plugin_array['g7_button'] = $this->url . 'buttons2.js';
+			$plugin_array['g7_button'] = $this->url . 'js/buttons2.js';
 		} else {
-			$plugin_array['g7_button'] = $this->url . 'buttons.js';
+			$plugin_array['g7_button'] = $this->url . 'js/buttons.js';
 		}
 		return $plugin_array;
 	}

@@ -161,22 +161,22 @@ body a.g7-btn:hover {
 .g7-info {
 	border-color: #BFDBF2;
 	background-color: #EDFAFF;
-	background-image: url(images/information-white.png);
+	background-image: url(../images/information-white.png);
 }
 .g7-success {
 	border-color: #D3E5AD;
 	background-color: #FAFFEA;
-	background-image: url(images/tick.png);
+	background-image: url(../images/tick.png);
 }
 .g7-error {
 	border-color: #F2BDA3;
 	background-color: #FCE8E0;
-	background-image: url(images/exclamation-red.png);
+	background-image: url(../images/exclamation-red.png);
 }
 .g7-warning {
 	border-color: #EAE3AF;
 	background-color: #FFFCE5;
-	background-image: url(images/exclamation.png);
+	background-image: url(../images/exclamation.png);
 }
 body .g7-msg h3 {
 	margin: 0 0 10px;
@@ -331,19 +331,19 @@ ul.g7-tabs li a:hover {
 }
 .g7-bullet ul li {
 	padding-left: 25px;
-	background: url(images/globe-small.png) 0 5px no-repeat;
+	background: url(../images/globe-small.png) 0 5px no-repeat;
 }
 .g7-tick ul li {
 	padding-left: 25px;
-	background: url(images/tick.png) 0 4px no-repeat;
+	background: url(../images/tick.png) 0 4px no-repeat;
 }
 .g7-cross ul li {
 	padding-left: 25px;
-	background: url(images/cross.png) 0 5px no-repeat;
+	background: url(../images/cross.png) 0 5px no-repeat;
 }
 .g7-plus ul li {
 	padding-left: 25px;
-	background: url(images/plus.png) 0 4px no-repeat;
+	background: url(../images/plus.png) 0 4px no-repeat;
 }
 body .g7-bullet ul li,
 body .g7-tick ul li,
@@ -414,7 +414,7 @@ body .g7-plus ul li {
 	word-wrap: break-word;
 	margin-bottom: 20px;
 	padding: 10px;
-	background: #fafafa url(images/code-bg.png);
+	background: #fafafa url(../images/code-bg.png);
 	padding: 19px;
 	line-height: 19px;
 	border: 1px solid #eaeaea;
@@ -472,7 +472,7 @@ dl.g7-toggle {
 }
 dl.g7-toggle dt {
 	padding: 0 0 0 20px;
-	background: #fff url(images/acc-plus.gif) -15px -10px no-repeat;
+	background: #fff url(../images/acc-plus.gif) -15px -10px no-repeat;
 	cursor: pointer;
 }
 dl.g7-toggle dd {
@@ -482,7 +482,7 @@ dl.g7-toggle dd {
 }
 dl.g7-toggle dt.active {
 	color: #444;
-	background: #fff url(images/acc-min.gif) -15px -10px no-repeat;
+	background: #fff url(../images/acc-min.gif) -15px -10px no-repeat;
 }
 
 
